@@ -7,6 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
+
+   
+<!-- =====================================================
+     CAFE HOUSE OPENING ANIMATION
+===================================================== -->
+
+<div class="cafe-opening" id="cafeOpening">
+
+    <div class="opening-glow"></div>
+
+    <div class="opening-content">
+
+        <img
+            src="cafe images/logo.png"
+            class="opening-logo"
+            alt="Cafe House Logo"
+        >
+
+        <div class="opening-welcome">
+            WELCOME TO
+        </div>
+
+        <h1 class="opening-title">
+            CAFE HOUSE
+        </h1>
+
+        <div class="opening-line">
+            <span></span>
+        </div>
+
+        <p class="opening-subtitle">
+            BREWING SOMETHING SPECIAL...
+        </p>
+
+    </div>
+
+    <div class="opening-left"></div>
+    <div class="opening-right"></div>
+
+</div>
+
+<!-- =====================================================
+     END OPENING ANIMATION
+===================================================== -->
+
+
     <header>
         <div class="nav-layout">
        <div> <img class="first-logo-class" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8F5iuaQF8hKPN8N4UUmRK93jnPBNP61yrrROGnhwIUeqtQLPzDcVtFAQ0&s=10" width="70px" height="70px" alt="">
@@ -397,9 +445,62 @@
 
     </section>
 
+   
+
+    <div class="last-section">
+
+        <div class="last-section-top">
+
+            <div class="last-section-top1">
+                <img src="cafe images/crand1.jpg" alt="" height="200px" width="220px">
+
+            </div>
+            <div class="last-section-top2">
+                 <img src="cafe images/crand2.jpg" alt="" height="200px" width="220px">
+                
+            </div>
+            <div class="last-section-top3">
+
+                 <img src="cafe images/crand3.jpg" alt="" height="200px" width="220px">
+                
+            </div>
+            <div class="last-section-top4">
+                 <img src="cafe images/crand4.jpg" alt="" height="200px" width="220px">
+                
+            </div>
+
+
+        </div>
+
+
+         <div class="last-section-bottom">
+
+
+            <div class="last-section-bottom1">
+                 <img src="cafe images/crand5.jpg" alt="" height="200px" width="220px">
+
+            </div>
+            <div class="last-section-bottom2">
+                 <img src="cafe images/crand6.jpg" alt="" height="200px" width="220px">
+                
+            </div>
+            <div class="last-section-bottom3">
+                 <img src="cafe images/crand7.jpg" alt="" height="200px" width="220px">
+                
+            </div>
+            <div class="last-section-bottom4">
+                 <img src="cafe images/crand8.jpg" alt="" height="200px" width="220px">
+                
+            </div>
+            
+        </div>
+
+
+    </div>
 
 
 
+     
 
 
 
@@ -493,8 +594,69 @@
 
 
 
+<!-- Adding js code for website opening animation-->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const opening =
+            document.getElementById(
+                "cafeOpening"
+            );
 
 
+        /*
+         * Prevent scrolling while
+         * opening animation is running.
+         */
+
+        document.body.style.overflow =
+            "hidden";
+
+
+        /*
+         * Let the Café House intro
+         * stay visible for 3.6 seconds.
+         */
+
+        setTimeout(function () {
+
+            opening.classList.add(
+                "opening-exit"
+            );
+
+
+            /*
+             * Animation finishes after
+             * approximately 1 second.
+             */
+
+            setTimeout(function () {
+
+                opening.classList.add(
+                    "opening-finished"
+                );
+
+
+                /*
+                 * Allow normal scrolling.
+                 */
+
+                document.body.style.overflow =
+                    "";
+
+            }, 1100);
+
+        }, 3600);
+
+    }
+
+);
+
+</script>
 </body>
 </html>
 

@@ -7,6 +7,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- =====================================================
+     CAFE HOUSE OPENING ANIMATION
+===================================================== -->
+
+<div class="cafe-opening" id="cafeOpening">
+
+    <div class="opening-glow"></div>
+
+    <div class="opening-content">
+
+        <img
+            src="cafe images/logo.png"
+            class="opening-logo"
+            alt="Cafe House Logo"
+        >
+
+        <div class="opening-welcome">
+            WELCOME TO
+        </div>
+
+        <h1 class="opening-title">
+            CAFE HOUSE
+        </h1>
+
+        <div class="opening-line">
+            <span></span>
+        </div>
+
+        <p class="opening-subtitle">
+            BREWING SOMETHING SPECIAL...
+        </p>
+
+    </div>
+
+    <div class="opening-left"></div>
+    <div class="opening-right"></div>
+
+</div>
+
+<!-- =====================================================
+     END OPENING ANIMATION
+===================================================== -->
+
+    
+
     <header>
         <div class="nav-layout">
        <div> <img class="first-logo-class" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8F5iuaQF8hKPN8N4UUmRK93jnPBNP61yrrROGnhwIUeqtQLPzDcVtFAQ0&s=10" width="70px" height="70px" alt="">
@@ -38,6 +83,7 @@
     
     </header>
 
+    
 
 
         <section class="section1">
@@ -147,6 +193,8 @@
 
             <div class="right-half">
                 <img class="first-light-place" src="cafe images/1.jpg" alt="Logo" height="200px" width="200px">
+
+                
 
             </div>
 
@@ -376,7 +424,7 @@
                      
                 </div>
 
-                <img class="first-light-place" src="cafe images/special-2.jpg" alt="Logo" height="150px" width="275px">
+                <img class="first-light-place" src="cafe images/brand1.jpg" alt="Logo" height="150px" width="275px">
 
 
             </div>
@@ -389,14 +437,14 @@
 
                 <div class="section4-main2-right-bottom-one">
 
-                     <img class="first-light-place" src="cafe images/special-3.jpg" alt="Logo" height="200px" width="110px">
+                     <img class="first-light-place" src="cafe images/brand2.jpg" alt="Logo" height="200px" width="110px">
 
 
                 </div>
 
                 <div class="section4-main2-right-bottom-two">
 
-                    <img class="first-light-place" src="cafe images/special-4.jpg" alt="Logo" height="220px" width="130px">
+                    <img class="first-light-place" src="cafe images/brand3.jpg" alt="Logo" height="220px" width="130px">
 
                     
                 </div>
@@ -499,6 +547,79 @@
        </div>
 
     </section>
+
+   
+    <section class="section6">
+
+
+        <div class="section6-one">
+
+            <img src="cafe images/side3.png" alt="">
+
+             <div class="gift-name1">
+           Gift Hamper
+           </div>
+
+        </div>
+
+
+
+        <div class="section6-two">
+
+            <img src="cafe images/side2.jpg" alt="">
+
+           <div class="gift-name2">
+           Gift Hamper
+           </div>
+
+        </div>
+
+
+        <div class="section6-three">
+
+            <img src="cafe images/side1.png" alt="">
+
+             <div class="gift-name3">
+           Gift Hamper
+           </div>
+
+
+        </div>
+
+        <div class="section6-four">
+
+            <img src="cafe images/side4.png" alt="">
+
+             <div class="gift-name4">
+           Gift Hamper
+           </div>
+
+
+        </div>
+
+    </section>
+
+
+     <section class="scrolling">
+        <marquee>Due to the current weather conditions, deliveries may experience delays. We appreciate your patience and understanding.
+
+            
+        </marquee>
+
+    </section>
+
+
+    <div class="delivery-image">
+        
+         <div class="delivery-box">
+            <img class="delivery-img"  src="cafe images/delivery.png" alt="" height="140px" width="140px">
+
+         </div>
+
+
+         
+    </div>
+
 
 
 
@@ -610,10 +731,69 @@
 
 
 
+<!-- Adding js code for website opening animation-->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const opening =
+            document.getElementById(
+                "cafeOpening"
+            );
 
 
+        /*
+         * Prevent scrolling while
+         * opening animation is running.
+         */
+
+        document.body.style.overflow =
+            "hidden";
 
 
+        /*
+         * Let the Café House intro
+         * stay visible for 3.6 seconds.
+         */
+
+        setTimeout(function () {
+
+            opening.classList.add(
+                "opening-exit"
+            );
+
+
+            /*
+             * Animation finishes after
+             * approximately 1 second.
+             */
+
+            setTimeout(function () {
+
+                opening.classList.add(
+                    "opening-finished"
+                );
+
+
+                /*
+                 * Allow normal scrolling.
+                 */
+
+                document.body.style.overflow =
+                    "";
+
+            }, 1100);
+
+        }, 3600);
+
+    }
+
+);
+
+</script>
 
 </body>
 </html>
